@@ -1,0 +1,27 @@
+<!--pages/sourcefor/sourcefor.wxml-->
+<view class='container'>
+	<view class='headnav'>
+		<view class='navleft' bindtap='navleft'>返回</view>
+		<text>报料申请</text>
+		<view class='blrecord' bindtap='blrecordNav'>历史报料</view>
+	</view>
+	<form bindsubmit="bindFormSubmit">
+		<textarea class='text' maxlength='100' bindinput="bindKeyInput" placeholder="点击输入" value='{{textval}}' name="textarea"/>
+    <view class='absolutenum'>{{textnum}}/100</view>
+    	<view class='view-img'>
+			<view class='view-img-list' bindtap='updataimg' id='view-img-list' style='height:{{imgheight}}' data-id='1'>
+				<image src="{{img_1?'https://ylx.cqyycc.top/'+img_1:''}}" mode='widthFix'></image>
+				<view class="{{img_1!=''?'clearimg':'hide'}}" catchtap="clearimg" data-id='1'><text class='xposti'>x</text></view>
+			</view>
+			<view class='view-img-list' style='height:{{imgheight}}' bindtap='updataimg' data-id='2'>
+				<image src="{{img_2?'https://ylx.cqyycc.top/'+img_2:''}}" mode='widthFix'></image>
+				<view class="{{img_2!=''?'clearimg':'hide'}}" catchtap="clearimg" data-id='2'><text class='xposti'>x</text></view>
+			</view>
+			<view class='view-img-list' style='height:{{imgheight}}' bindtap='updataimg' data-id='3'>
+				<image src="{{img_3?'https://ylx.cqyycc.top/'+img_3:''}}" mode='widthFix'></image>
+				<view class="{{img_3!=''?'clearimg':'hide'}}" catchtap="clearimg" data-id='3'><text class='xposti'>x</text></view>
+			</view>
+		</view>
+		<button class='btn-top' form-type="submit"> 提交 </button>
+	</form>
+</view>

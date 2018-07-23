@@ -1,0 +1,259 @@
+/* pages/myworkorder/order.wxss */
+@import "../../css/base.wxss";
+.header{
+  position: relative;
+  width: 100%;
+  padding-bottom: 30rpx;
+  text-align: center;
+  color: white;
+  background-color: #16C39A;
+  z-index: 1;
+}
+.navleft{
+  position: absolute;left: 20rpx;top: 0;
+  width: 60rpx;
+  height: 60rpx;
+  z-index: 99;
+}
+.icon-saoyisao{
+  font-size: 50rpx;
+  color: white;
+}
+.navright{
+  position: absolute;
+  top: -10rpx;
+  right: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 60rpx;
+  color: white;
+}
+.body{
+  position: relative;
+  width: 100%;
+}
+page{background-color:#edf0f3;}
+.nav{
+  display:flex;
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align:center;
+  flex-direction:row;
+  color:#989898;
+  font-size:30rpx;
+  border-bottom:1px solid gainsboro;
+}
+.default{
+  flex:3;
+}
+.red{
+  line-height:100rpx;
+  text-align:center;
+  color:#16C39A;
+  flex:3;
+  border-bottom:2px solid #16C39A;
+  font-size:30rpx;
+}
+.saixuan{
+  flex: 1.5;
+}
+.show{
+  display:block;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.show1{
+  display: block;
+}
+.hidden{display:none;text-align:center;line-height:200px;}
+.ploperation{
+  float: right;
+  width: 160rpx;
+  font-size: 24rpx;
+  color: white;
+  background-color: #16C39A;
+}
+.section__title{
+  width: 100%;
+}
+.section__title::after{
+  content: '';
+  clear: both;
+}
+.cencle{
+  float: right;
+  margin-right: 20rpx;
+  background-color: #DD433F;
+}
+checkbox-group{
+  display: inline-block;
+}
+.checkbox{
+  font-size: 26rpx;
+  color: #989898;
+}
+.notcheck,.notorder-list{
+	display: inline-block;
+}
+.notcheck{
+	 width: 7%; 
+	 vertical-align: top;
+	 margin-top: 120rpx;
+}
+.notorder-list{
+	overflow: hidden;
+	width: 90%;
+  margin-left: 1.5%;
+	margin-top: 20rpx;
+	border: solid #E4E4E4 1px;
+	border-radius: 10rpx;
+}
+.notorder-list-width{
+  overflow: hidden;
+	width: 100%;
+	margin-top: 20rpx;
+	border: solid #E4E4E4 1px;
+	border-radius: 10rpx;
+}
+.endorder-list{
+	overflow: hidden;
+	margin-top: 20rpx;
+	border: solid #E4E4E4 1px;
+	border-radius: 10rpx;
+}
+.not-list-d{
+	position: relative;
+	line-height: 70rpx;
+	font-weight: bold;
+	color: white;
+	background-color: #FFA847;
+}
+.end-list-d-color{
+	background-color: #3DD283;
+}
+.not-list-d::after{
+	content: '';
+	clear: both;
+}
+.font40{
+	margin-left: 20rpx;
+	font-size: 35rpx;
+}
+.jiaji{
+	position: absolute;
+	display: none;
+	width: auto;
+	height: auto;
+	left: 50%;
+	top: 7rpx;
+	line-height: 60rpx;
+	padding: 0 15rpx;
+	box-sizing: border-box;
+	font-weight: 100;
+	font-size: 24rpx;
+	border-radius: 10rpx;
+	 background-color: orangered; 
+}
+.sanjiao{
+	position: absolute;
+	left: 10rpx;
+	top: 45rpx;
+	border: rgba(0,0,0,0) solid 30rpx;
+    border-top: orangered 30rpx solid;
+}
+.font30{
+	float: right;
+	margin-right: 20rpx;
+	font-size: 30rpx;
+}
+.xdtime{
+	padding: 20rpx 20rpx 0 20rpx;
+	box-sizing: border-box;
+	font-size: 24rpx;
+	color: #999999;
+}
+.text-right{
+	float: right;
+	margin-right: 80rpx;
+}
+.end-text-right{
+	float: right;
+	margin-right: 24rpx;
+}
+.wccolor{
+	color: #16C39A;
+}
+.buttomright>image{
+	float: right;
+	margin-right: 20rpx;
+	padding: 20rpx 0;
+	width: 40rpx;
+	height: 40rpx;
+}
+.widthdan{
+  display: block;
+  width: 100%；
+}
+/* 筛选隐藏 */
+.hideview{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.saixuanview{
+  position: absolute;
+  width: 600rpx;
+  height: 800rpx;
+  top: 200rpx;
+  right: 0;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 99;
+}
+.satxbody{
+  border-top: solid 1px #E3E3E3;
+}
+.danhao{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  border: solid 1px #E3E3E3;
+  border-top:none; 
+}
+.placeclass{
+  color: #DFDFDF;
+  font-size: 26rpx;
+}
+.banktext{
+  color: #DFDFDF;
+}
+.shaoxuanbuttom{
+  display: flex;
+  justify-content: space-around;
+  flex-direction:row;
+  margin-top: 100rpx;
+}
+.shaoxuanbuttom>button{
+  width: 210rpx;
+  color: white;
+  text-align: center;
+  font-size: 26rpx;
+  letter-spacing: 30rpx;
+}
+.shaobuleft{
+  background-color: #EF4844;
+}
+.shaoburight{
+  background-color: #17BB9C;
+}
+.disshow{
+	display: inline-block;
+}

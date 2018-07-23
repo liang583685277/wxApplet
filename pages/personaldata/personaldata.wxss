@@ -1,0 +1,72 @@
+/* pages/personaldata/personaldata.wxss */
+.body{
+  width: 100%;
+}
+.headicon{
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+  /* 
+  justify-content: space-between; */
+  border-bottom:solid 1px #F1F1F1; 
+}
+.headicon>view{
+  display: inline-block;
+}
+.headimg{
+	overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+.headimg>image{
+  width: 100%;
+  height: 100%;
+}
+.alerthead{
+  float: right;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30rpx;
+  vertical-align: top;
+}
+.personinfo{
+  margin: 50rpx 40rpx 200rpx;
+  border-top:solid 1px #F1F1F1;
+}
+.person-list{
+  display: flex;
+  flex-direction:row;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border:solid 1px #F1F1F1;
+  border-top:none; 
+}
+.headtext{
+  flex: 2;
+  text-indent: 30rpx;
+  color: #969696;
+}
+.banktext{
+  color: #969696;
+}
+.rightin{
+  flex: 5;
+  display: flex;
+  align-items: center;
+}
+.button{
+  width: 90%;
+  height: 100rpx;
+  margin: 130rpx auto 0;
+  border-radius: 50rpx;
+  font-size: 36rpx;
+  color: white;
+  background-color: #16C39A;
+}
+.alerthead>image{
+	width: 40rpx;
+	height: 40rpx;
+	margin-left: 20rpx;
+	vertical-align: middle;
+}

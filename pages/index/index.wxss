@@ -1,0 +1,88 @@
+/**index.wxss**/
+@import "../../css/base.wxss";
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100rpx;
+  box-sizing: border-box;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+form{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.userinfo-i{
+	width: 128rpx;
+	height: 128rpx;
+  margin-bottom: 150rpx;
+}
+.fontsize{
+  font-size: 128rpx;
+  color: #1abc9c;
+}
+.conlistbox{
+  position: relative;
+  width: 80%;
+  height: 128rpx;
+  line-height: 128rpx;
+  margin: 0 auto;
+  font-size: 35rpx;
+  color: #aaa;
+  border-bottom: solid #aaa 1rpx; 
+}
+.conleft{
+  position: absolute;left: 30rpx;top: 0;
+  width: auto;
+  height: auto;
+}
+.passwordshow{
+	position: absolute;top: 0;right: 0;
+	width: 120rpx;
+	height: 50rpx;z-index: 99;
+}
+.left-icon{
+  height: 128rpx;
+  line-height: 128rpx;
+  font-size: 50rpx;
+}
+.nameinput{
+  height: 128rpx;
+  line-height: 128rpx;
+  padding-left: 120rpx;
+  box-sizing: border-box;
+}
+.autologin{
+	width: 80%;
+	height: 110rpx;
+	margin: 20rpx auto 0;
+	font-size: 35rpx;
+	color: #aaa;
+}
+.checkbox{
+	margin-left: 30rpx;
+}
+.buttonwiew{
+	width: 80%;
+  margin: 0 auto;
+}
+.buttonlogin{
+	width: 100%;
+	border-radius: 50rpx;
+	color: white;
+	background-color: #1abc9c;
+}

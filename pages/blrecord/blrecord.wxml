@@ -1,0 +1,33 @@
+<!--pages/blrecord/blrecord.wxml-->
+<view class='container'>
+	<view class='nav'>
+		<view class='navcenter' bindtap='navcenter'>返回</view>
+		<view>历史反馈</view>
+	</view>
+	<scroll-view scroll-y="true" style="height: {{wheight}}" bindscrolltoupper="onPullDownRefresh" bindscrolltolower="onReachBottom" scroll-top="{{scrollTop}}">
+		<view class='info-list' wx:for="{{miandata}}" wx:key="item">
+			<view class='publish'>
+				<view class='icon-posi'><span class="icon-lishi fontsize {{item.status==0?'icon-ju':'icon-lu'}}"></span></view>
+				<text class='fbtext'>{{item.revelation}}</text>
+				<view class='view-img'>
+					<image src="{{item.img_1?'https://ylx.cqyycc.top/'+item.img_1:''}}" mode='widthFix' bindtap='previewImg' data-imgurl="{{item.img_1?'https://ylx.cqyycc.top/'+item.img_1:''}}"></image>
+					<image src="{{item.img_2?'https://ylx.cqyycc.top/'+item.img_2:''}}" mode='widthFix' bindtap='previewImg' data-imgurl="{{item.img_2?'https://ylx.cqyycc.top/'+item.img_2:''}}"></image>
+					<image src="{{item.img_3?'https://ylx.cqyycc.top/'+item.img_3:''}}" mode='widthFix' bindtap='previewImg' data-imgurl="{{item.img_3?'https://ylx.cqyycc.top/'+item.img_3:''}}"></image>
+				</view> 
+				<view class='fbtime'>发表于：{{item.createtime}}</view>
+			</view>
+			<view class='huview' wx:if="{{item.status==1}}">
+				<view class='fbtext replytext'>{{item.reply}}</view>
+				<view class='view-img'>
+					<image src="{{item.reply_img_1?'https://ylx.cqyycc.top/'+item.reply_img_1:''}}" mode='widthFix' bindtap='previewImg' data-imgurl="{{item.reply_img_1?'https://ylx.cqyycc.top/'+item.reply_img_1:''}}"></image>
+					<image src="{{item.reply_img_2?'https://ylx.cqyycc.top/'+item.reply_img_2:''}}" mode='widthFix' bindtap='previewImg' data-imgurl="{{item.reply_img_2?'https://ylx.cqyycc.top/'+item.reply_img_2:''}}"></image>
+					<image src="{{item.reply_img_3?'https://ylx.cqyycc.top/'+item.reply_img_3:''}}" mode='widthFix' bindtap='previewImg' data-imgurl="{{item.reply_img_3?'https://ylx.cqyycc.top/'+item.reply_img_3:''}}"></image>
+				</view>
+				<view class='fbtime replytext'>回复于：{{item.replytime}}</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view hidden='{{previewimgstatus}}' class='previewimg' bindtap='closeimg'>
+		<image mode='widthFix' src="{{previewimgurl}}"></image>
+	</view>
+</view>

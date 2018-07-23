@@ -1,0 +1,36 @@
+<!--pages/pushmoney/pushmoney.wxml-->
+<view class='body'>
+  <view class='timeyer'>
+    <view class='niandu'>年度</view>
+    <view class='yerview'>
+      <picker mode="date" value="{{date}}" fields="year" start="1900" end="{{enddate}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='tichengdata'>
+      <view class='headtcdata'>
+          <view>提成</view>
+          <view>已结算</view>
+          <view>未结算</view>
+      </view>
+      <view class='contcdata'>
+          <view>{{maindat.total.commission?maindat.total.commission:'0.00'}}</view>
+          <view>{{maindat.total.settlement?maindat.total.settlement:'0.00'}}</view>
+          <view class='wjsdata'>{{maindat.total.unsettlement?maindat.total.unsettlement:'0.00'}}		</view>
+      </view>
+  </view>
+  <view class='datalist'>
+		<scroll-view scroll-y="true" style="height: {{height}}" bindscrolltoupper="onPullDownRefresh" bindscrolltolower="onReachBottom" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+			<view class='data-list' wx:for="{{maindat.list}}" wx:key="item">
+				<view class='yertime '>{{item.ym}}</view>
+				<view class='ckscdto' bindtap='navvieworder' id='{{item.ym}}'><text>查看生产单</text><image class='navimg' src='../../img/right.png'></image></view>
+				<view class='tcinfo'>
+					<text>提成 ¥ {{item.commission}}</text><text>已结算 ¥ {{item.settlement}}</text><text class='tcinfowjs'>未结算  ¥ {{item.unsettlement}}</text>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

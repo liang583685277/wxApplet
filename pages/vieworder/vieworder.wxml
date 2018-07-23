@@ -1,0 +1,28 @@
+<!--pages/pushmoney/vieworder/vieworder.wxml-->
+<view class='body'>
+  <view class='nav'>
+    <text class='returnnav' bindtap='returnnav'>返回</text>
+    <text>{{tm}}</text>
+  </view>
+  <view class='whiteview'></view>
+  <scroll-view scroll-y="true" style="height: {{wheight}}" bindscrolltoupper="onPullDownRefresh" bindscrolltolower="onReachBottom" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+		<view class="notorder-list" wx:for="{{maindata}}" wx:key="item" bindtap='navdetailpage' data-id='{{item.workorderid}}'>
+				<view class="{{item.status==3?'greencolor':'not-list-d'}}">		
+					<text class='font40'>单号：{{item.number}}</text>
+					<text class='font30'>提成：¥{{item.commission}}</text>
+				</view>
+				<view class='xdtime'>
+					<text>下单时间：{{item.ordertime}}</text>
+					<text class='text-right wccolor'>{{item.status==3?item.completiontime:'完成'}}</text>
+				</view>
+				<view class='xdtime'>
+					<text>限期时间：{{item.deadline}}</text>
+					<text class='text-right'>{{item.status==3?'':'退回'}}</text>
+				</view>
+				<view class='buttomright'>
+					<image src='../../img/right.png' bindtap='' id='{{item.workorderid}}'></image>
+				</view>
+			</view>
+  </scroll-view>
+  
+</view>

@@ -1,0 +1,87 @@
+<!--pages/myworkorder/lineitem/lineitem.wxml-->
+<view class='body'>
+    <view class='nav'>
+        <view class="{{selected?'seled':''}}" bindtap='selected'>订单信息</view>
+        <view class="{{selected1?'seled':''}}" bindtap='selected1'>生产进度</view>
+    </view>
+    <view class="{{selected?'seledview':'seledhide'}}">
+        <scroll-view scroll-y="true" style="height: {{height}}" scroll-top="{{scrollTop}}">
+          <view class='item-list'><text class='text1'>生产单号</text><text class='text2'>{{orderdata.number}}</text></view>
+          <view class='item-list'><text class='text1'>出单时间</text><text class='text2'>{{orderdata.ordertime}}</text></view>
+          <view class='item-list'><text class='text1'>交货日期</text><text class='text2'>{{orderdata.deliverytime}}</text></view>
+          <view class='item-list'><text class='text1'>款式</text><text class='text2'>{{orderdata.style}}</text></view>
+          <view class='item-list'><text class='text1'>要求</text><text class='text2'>{{orderdata.requirement}}</text></view>
+          <view class='item1-list'>
+              <text class='item1-text1'>规格</text>
+            <view class='item1-text2'>
+              <view class='item1-list-view bgcolor'>
+			  <text>花位</text>
+              <text>宽</text>
+              <text>高</text>
+              <text>数量</text>
+              <text>单位</text>	  
+            </view>
+            <view class='item1-list-view' wx:for="{{orderdata.specs}}" wx:key="item">
+              <text>{{item.flower}}</text>
+			  <text>{{item.wide}}</text>
+              <text>{{item.high}}</text>
+              <text>{{item.num}}</text>
+              <text>{{item.unit}}</text>
+            </view>
+            </view>
+          </view>
+          <view class='item1-list'>
+              <text class='item1-text1'>管材</text>
+            <view class='item2-text2'>
+                <view class='guige'>{{orderdata.pipe.pipeStyle}}</view>
+                <view class='item2-text2-view'>
+                  <view class='item1-list-view bgcolor'>
+                    <text>宽</text>
+                    <text>高</text>
+                    <text>数量</text>
+                  </view>
+                  <view class='item1-list-view' wx:for="{{orderdata.pipe.pipeSpesArr}}" wx:key="item">
+                    <text>{{item.wide}}</text>
+                    <text>{{item.high}}</text>
+                    <text>{{item.num}}</text>
+                  </view>	  
+                </view> 
+                <view class='guige bordertop'>{{orderdata.pipe.pipeName}}</view>
+            </view>
+          </view>
+          <view class='item1-list'>
+              <text class='item1-text1'>单边斜口</text>
+              <view class='item1-text2'>
+                <view class='item1-list-view bgcolor'>
+                <text>宽</text>
+                <text>高</text>
+                <text>数量</text>
+              </view>
+              <view class='item1-list-view' wx:for="{{orderdata.unilateral}}" wx:key="item">
+                <text>{{item.wide}}</text>
+                <text>{{item.high}}</text>
+                <text>{{item.num}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='viewimg'>
+            <view class='futu'>附图</view>
+            <image src="{{orderdata.attachment?'https://ylx.cqyycc.top/'+orderdata.attachment:''}}" mode="widthFix" bindtap='openpreviewimg'></image>
+          </view>
+        </scroll-view>
+    </view>
+    <view class="seledhide {{selected1?'scjdimg':seledhide}}">
+      <scroll-view scroll-y="true" style="height: {{height}}" scroll-top="{{scrollTop}}">
+        <view class="itemitem-list {{item.status==3?'statusa':(item.status==2?'statusb':'')}}" wx:for="{{scdata}}" wx:key="item">
+          <view class='headitem'>{{item.process}}</view>
+          <view>状态：{{statusstr[item.status]}}</view>
+          <view>开始时间：{{item.starttime}}</view>
+          <view>完成时间：{{item.completiontime}}</view>
+          <view>期限时间：{{item.deadline}}</view>
+          <view>负责人：{{item.employee}}</view>
+          <text class='icon-text'>{{index+1}}</text>
+        </view>
+      </scroll-view>
+    </view>
+	<view hidden='{{previewimgstatus}}' class='previewimg' bindtap='closeimg'><image mode='widthFix' src="{{previewimgurl}}"></image></view>
+</view>

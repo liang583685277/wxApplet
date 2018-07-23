@@ -1,0 +1,50 @@
+/* pages/jobplacement/jobplacement.wxss */
+.conbody{
+	width: 100%;
+	padding-top: 25rpx;
+	box-sizing: border-box;
+}
+.time-view{
+	text-align: center;
+}
+.time{
+	display: inline-block;
+	width: auto;
+	line-height: 40rpx;
+	padding: 0 10rpx;
+	border-radius: 10rpx;
+	font-size: 24rpx;
+	color: white;
+	background-color: #BCBCBC;
+}
+.info-list{
+	width: 80%;
+	margin: 10rpx auto 40rpx;
+  border: solid 1px #DBE0EC;
+}
+.info-list-img{
+	width: 100%;
+  /* background-color: red; */
+}
+.info-list-img>image{
+	  width: 100%;
+	  height: 300rpx;
+}
+.info-test{
+	width: 100%;
+    padding: 30rpx 40rpx 40rpx;
+    box-sizing: border-box;
+}
+.text-blod{
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.text-msg{
+   /* line-height: 50rpx;  */
+   padding: 12rpx 0; 
+   box-sizing: border-box;
+   font-size: 26rpx;
+   color: #3E3E3E;
+   word-break:break-all;
+}

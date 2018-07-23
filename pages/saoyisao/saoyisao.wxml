@@ -1,0 +1,8 @@
+<!--pages/saoyisao/saoyisao.wxml-->
+<view class='saobody'>
+	<view class='headnav'>
+  <view class='lefttap' bindtap='lefttap'>返回</view>
+		<text>扫一扫</text>
+		<view class='righttap' bindtap='righttap'>手动添加</view>
+	</view>
+</view>

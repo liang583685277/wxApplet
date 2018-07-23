@@ -1,0 +1,11 @@
+<!--pages/handadd/handadd.wxml-->
+<view class='handbody'>
+	<form bindsubmit="formSubmit" bindreset="formReset">
+		<view class="section">
+			<input type='text' name='number' bindinput="bindReplaceInput" placeholder="请输入系统编号" />
+		</view>
+		<view >
+			<button class="btn-top" formType="submit">确认</button>
+		</view>
+	</form>
+</view>

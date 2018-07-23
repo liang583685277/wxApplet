@@ -1,0 +1,120 @@
+@import "../../css/base.wxss";
+.topinfo{
+	width: 100%;
+	height: auto;
+	background-color: #16C39A;
+}
+.staffhead{
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+  	border-radius: 40px;
+	margin: 0 auto;
+}
+.staffhead>image{
+	width: 100%;
+	height: 100%;
+}
+.staffname{
+	width: 100%;
+	margin-top: 20rpx;
+	text-align: center;
+}
+.staffname>text{
+	font-size: 32rpx;
+	color: white;
+}
+.infolist{
+	display: flex;
+	margin-top: 60rpx;
+	padding-bottom: 20rpx;
+	box-sizing: border-box;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	align-items: center;
+	color: white;
+}
+.list-info{
+	flex:1;
+	font-size: 24rpx;
+	text-align: center;
+}
+.list-right{
+	border-right: solid white 1px;
+}
+.list-top{
+	margin-top: 20rpx;
+}
+.list-size{
+	font-size: 30rpx;
+}
+.menu{
+	display: flex;
+	width: 100%;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	align-items: center;
+	font-size: 70rpx;
+	color: #666666;
+}
+.menu-icon{
+	position: relative;
+}
+.menu-list{
+	position: relative;
+	flex:1;
+	padding-top: 30rpx;
+	box-sizing: border-box;
+	font-size: 80rpx;
+	text-align: center;
+	border: solid 1px #E3E3E3;
+}
+.icon-text-font{
+	width: 100%;
+	margin-top: -20rpx;
+	padding-bottom: 40rpx;
+	box-sizing: border-box;
+	text-align: center;
+}
+.icon-text-font>text{
+	font-size: 34rpx;
+}
+.icon-saoyisao{
+	color: #00B2DF;
+}
+.icon-cart{
+	color: #F04844;
+}
+.icon-alert{
+	color: #FFA847;
+}
+.icon-money{
+	color: #14A987;
+}
+.icon-info{
+	color: #19CD8A;
+}
+.centerview{
+	width: 100%;
+	background-color: #16C39A;
+}
+.centerout{
+	float: right;
+	height: 100rpx;
+	line-height: 100rpx;
+	margin-right: 50rpx;
+	color: white;
+}
+.messageCount{
+	position: absolute;
+	top: -14rpx;
+	left: 128rpx;
+	width: auto;
+	height: auto;
+	padding: 6rpx 16rpx;
+	box-sizing: border-box;
+	border-radius: 22rpx;
+	font-size: 30rpx;
+	color: white;
+	background-color: #FFA847;
+}

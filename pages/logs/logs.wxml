@@ -1,0 +1,91 @@
+<!--logs.wxml-->
+<view class="container">
+	<view class='centerview'><text class='centerout' bindtap='centerout'>退出</text></view>
+    <view class='topinfo'>
+		<view class='staffhead' bindtap='personaldata'>
+			<image src="{{sttafinfo.avatar?'https://ylx.cqyycc.top/'+sttafinfo.avatar:'../../img/u426.png'}}"/>
+		</view>
+		<view class='staffname'>
+			<text>{{sttafinfo.name}}</text>
+		</view>
+		<view class='infolist'>
+			<view class='list-info list-right' bindtap='pushmoney'>
+				<view class='list-size'>
+					<text>¥ {{sttafinfo.commission}}</text>
+				</view>
+				<view class='list-top'>
+					<text>本月提成</text>
+				</view>
+			</view>
+			<view class='list-info list-right' bindtap='myworkorder'>
+				<view class='list-size'>
+					<text>{{sttafinfo.doingCount}}</text>
+				</view>
+				<view class='list-top'>
+					<text>本月进行中工单</text>
+				</view>
+			</view>
+			<view class='list-info' bindtap='myworkorderyiwancheng'>
+				<view class='list-size'>
+					<text>{{sttafinfo.finishedCount}}</text>
+				</view>
+				<view class='list-top'>
+					<text>本月已完成工单</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='menu'>
+		<view class='menu-list' bindtap='saoyisao'>
+			<view class='menu-icon'>
+				<text class='icon-saoyisao'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>扫一扫</text>
+			</view>
+		</view>
+		<view class='menu-list' bindtap='myworkorder'>
+			<view class='menu-icon'>
+				<text class='icon-cart'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>我的工单</text>
+			</view>
+		</view>
+		<view class='menu-list' bindtap='jobOpenurl'>
+			<view class='menu-icon'>
+				<view class='messageCount'>{{sttafinfo.messageCount}}</view>
+				<text class='icon-alert'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>工作安排</text>
+			</view>
+		</view>
+	</view>
+	<view class='menu'>
+		<view class='menu-list' bindtap='pushmoney'>
+			<view class='menu-icon'>
+				<text class='icon-money'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>提成明细</text>
+			</view>
+		</view>
+		<view class='menu-list' bindtap='sourcefor'>
+			<view class='menu-icon'>
+				<text class='icon-info'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>报料申请</text>
+			</view>
+		</view>
+		<view class='menu-list' bindtap='setOpen'>
+			<view class='menu-icon'>
+				<text class='icon-set'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>修改密码</text>
+			</view>
+		</view>
+	</view>
+</view>

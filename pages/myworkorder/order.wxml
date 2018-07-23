@@ -1,0 +1,153 @@
+<!--pages/myworkorder/order.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='navleft' bindtap='saoyisao'>
+      <text class='icon-saoyisao'></text>
+    </view>
+    <view><text>我的工单</text></view>
+    <view class='navright' bindtap='closeWin'><text class='icon-user'></text></view>
+  </view>
+  <view class="nav bc_white">
+      <view class="{{selected?'default':'red'}}" bindtap="selected">进行中</view>
+      <view class="{{selected1?'default':'red'}}" bindtap="selected1">已完成</view>
+      <view class='saixuan' bindtap='shaixuan'>筛选</view>
+  </view>
+  <view class="hideheader" hidden="{{hideHeader}}">
+			<view>下拉刷新中……</view>
+			<view>{{refreshTime}}</view>
+  </view>
+  <view class="body">
+    <!-- 进行中view -->
+    <view hidden='{{selected}}' class="show">
+      <view class="section__title">
+        <checkbox-group bindchange="checkboxQuanChange">
+          <label hidden='{{plcaozuo}}' class="checkbox">
+            <checkbox value="1"/>全选
+          </label>
+        </checkbox-group>
+        <button hidden='{{plczbuttomstatus}}' class="ploperation" bindtap="plcaozuo">批量操作</button>
+        <button hidden='{{plcaozuo}}' class="ploperation" bindtap="plfulfill">批量完成</button>
+        <button hidden='{{plcaozuo}}' class="ploperation cencle" bindtap="primary">取消</button>
+      </view>
+      <scroll-view scroll-y style="height:{{height}}" bindscrolltoupper="pullToRefresh" bindscrolltolower="onReachBottom" scroll-top="{{scrollTop}}">
+        <checkbox-group class="widthdan" bindchange="checkboxChange">
+          <view wx:for="{{miandata}}" wx:key="item" bindtap='tolineitem' data-id='{{item.workorderid}}'>
+            <view hidden='{{plcaozuo}}' class="notcheck" catchtap="stopfun">
+				
+					<label class="checkbox">
+						<checkbox value="{{item.id}}" checked="{{selectedAllStatus}}"/>
+					</label>
+				
+            </view>
+            <view class="{{plcaozuo?'notorder-list-width':'notorder-list'}}">
+              <view class='not-list-d'>		
+                <text class='font40'>单号：{{item.number}}</text>
+				<view class="jiaji {{item.urgent == 1?'disshow':''}}">加急<view class='sanjiao'></view></view>
+                <text class='font30'>提成：¥{{item.commission}}</text>
+              </view>
+              <view class='xdtime'>
+                <text>下单时间：{{item.ordertime}}</text>
+                <text class='text-right wccolor' data-id='{{item.id}}' catchtap='fulfillok'>完成</text>
+              </view>
+              <view class='xdtime'>
+                <text>限期时间：{{item.deadline}}</text>
+                <text class='text-right' data-id='{{item.id}}' catchtap='returnnone'>退回</text>
+              </view>
+              <view class='buttomright'>
+                <image src='../../img/right.png'></image>
+              </view>
+            </view>
+          </view>
+        
+        <view class="hideheader" hidden="{{hideBottom}}">
+          <view>加载更多......</view>
+          <view>{{refreshTime}}</view>
+        </view>
+		<view class="hideheader" hidden="{{overstatus}}">
+		  <view>----到底啦小可爱，看看其他的吧----</view>
+          <view>{{refreshTime}}</view>
+		</view>
+		</checkbox-group>
+      </scroll-view>
+    </view>
+    <!-- 已完成 -->
+    <view hidden='{{selected1}}' class="show">
+		  <scroll-view scroll-y style="height:{{okheight}}" bindscrolltoupper="pullToRefresh" bindscrolltolower="onReachBottom" scroll-top="{{scrollTop}}">    
+        <view wx:for="{{miandata}}" wx:key="item">
+          <view class='endorder-list' bindtap='tolineitem' data-id='{{item.workorderid}}'>
+            <view class='not-list-d end-list-d-color'>		
+              <text class='font40'>单号：{{item.number}}</text>
+              <text class='font30'>提成：¥{{item.commission}}</text>
+            </view>
+            <view class='xdtime'>
+              <text>下单时间：{{item.ordertime}}</text>
+              <text class='end-text-right wccolor'>完成时间：{{item.completiontime}}</text>
+            </view>
+            <view class='xdtime'>
+              <text>限期时间：{{item.deadline}}</text>
+            </view>
+            <view class='buttomright'>
+              <image src='../../img/right.png'></image>
+            </view>
+          </view>
+        </view>
+        <view class="hideheader" hidden="{{hideBottom}}">
+          <view>加载更多......</view>
+          <view>{{refreshTime}}</view>
+        </view>
+		<view class="hideheader" hidden="{{overstatus}}">
+		  <view>----到底啦小可爱，看看其他的吧----</view>
+          <view>{{refreshTime}}</view>
+		</view>
+      </scroll-view>
+	  </view>
+    
+    
+  </view>
+  <!-- 筛选隐藏框 -->
+	<view hidden='{{shaistatus}}' class='hideview' bindtap='closeshaixuan'>
+		<view class="saixuanview" catchtap="stopfun">
+			<form bindsubmit="formSubmit">
+				<view class='satxbody'>
+				<view class='danhao'>
+					<input type='text' name="number" placeholder='单号' placeholder-class='placeclass'></input>
+				</view>
+				<view class='danhao'>
+					<picker mode="date" name="addtime_start" value="{{date}}" start="1900-09-01" end="" bindchange="bindDateChange">
+					<view class="picker">
+						<text class='banktext'>{{timetext}}</text>{{date}}
+					</view>
+					</picker>
+				</view>
+				<view class='danhao'>
+					<picker mode="date" name="addtime_end" value="{{datea}}" start="1900-09-01" end="" bindchange="bindDateChangea">
+					<view class="picker">
+						<text class='banktext'>{{timetext1}}</text>{{datea}}
+					</view>
+					</picker>
+				</view>
+				<view class='danhao'>
+					<picker mode="date" name="deadline_start" value="{{dateb}}" start="1900-09-01" end="" bindchange="bindDateChangeb">
+					<view class="picker">
+						<text class='banktext'>{{timetext2}}</text>{{dateb}}
+					</view>
+					</picker>
+				</view>
+				<view class='danhao'>
+					<picker mode="date" name="deadline_end" value="{{datec}}" start="1900-09-01" end="" bindchange="bindDateChangec">
+					<view class="picker">
+						<text class='banktext'>{{timetext3}}</text>{{datec}}
+					</view>
+					</picker>
+				</view>
+				<view class='shaoxuanbuttom'>
+					<button class='shaobuleft' bindtap='closeshaixuan'>取消</button>
+					<button class='shaoburight' formType="submit">确定</button>
+				</view>
+				</view>
+			</form>
+			
+			</view>
+	</view>
+    
+</view>

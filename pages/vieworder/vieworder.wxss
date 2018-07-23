@@ -1,0 +1,81 @@
+/* pages/pushmoney/vieworder/vieworder.wxss */
+.body{
+  position: relative;
+  width: 100%;
+}
+.nav{
+  width: 100%;
+  position: fixed;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: white;
+  background-color: #16C39A;
+  z-index: 99;
+}
+.returnnav{
+  position:absolute;
+  left: 30rpx;
+  font-size: 26rpx;
+}
+.whiteview{
+  height: 100rpx;
+}
+.notorder-list{
+	/* width: 90%; */
+	margin: 40rpx 30rpx 0;
+	border: solid #E4E4E4 1px;
+	border-radius: 10rpx;
+}
+.not-list-d{
+	line-height: 70rpx;
+	font-weight: bold;
+	color: white;
+	background-color: #FFA847;
+}
+.end-list-d-color{
+	background-color: #3DD283;
+}
+.not-list-d::after{
+	content: '';
+	clear: both;
+}
+.xdtime{
+	padding: 24rpx 20rpx 0 20rpx;
+	box-sizing: border-box;
+	font-size: 24rpx;
+	color: #999999;
+}
+.font40{
+	margin-left: 20rpx;
+	font-size: 35rpx;
+}
+.font30{
+	float: right;
+	margin-right: 20rpx;
+	font-size: 30rpx;
+}
+.text-right{
+	float: right;
+	margin-right: 80rpx;
+}
+.wccolor{
+	color: #16C39A;
+}
+.buttomright{
+  height:60rpx;
+}
+.buttomright>image{
+	float: right;
+	margin-right: 20rpx;
+	padding: 20rpx 0;
+	width: 30rpx;
+	height: 30rpx;
+}
+.greencolor{
+  line-height: 70rpx;
+	font-weight: bold;
+	color: white;
+  background-color: #3DD283;
+}

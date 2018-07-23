@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+	  	<view class='userinfo-i'><span class='icon-user-circle fontsize'></span></view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="conlistbox">
+      <view class="conleft"><span class="icon-username left-icon"></span></view>
+      <view class="conright">
+        <input type='number' maxlength='11' class="nameinput" name="phone" placeholder="登录账号" value='{{phone}}' />
+      </view>
+    </view>
+    <view class="conlistbox">
+      <view class="conleft"><span class="icon-password left-icon"></span></view>
+      <view class="conright">
+        <input class="nameinput" name="pwd" placeholder="登录密码" value='{{pwd}}' password='{{isShowPassword}}'/>
+      </view>
+       <view class="body-view passwordshow">
+            <switch checked="{{switch1Checked}}" bindchange="toggleShowPassword"/>
+      </view> 
+    </view>
+    <view class="autologin">
+          <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox">
+          <checkbox value="{{item.name}}" checked="{{logstatus}}"/>{{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='buttonwiew'>
+      <button class='buttonlogin' formType="submit">登录</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,28 @@
+/* pages/handadd/handadd.wxss */
+.handbody{
+	width: 100%;
+}
+.section{
+	height: 100rpx;
+	margin: 40rpx 10rpx 0;
+	border: solid 1px #E4E4E4;
+}
+.section>input{
+	height: 100rpx;
+	line-height: 100rpx;
+	padding-left: 30rpx;
+	box-sizing: border-box;
+	font-size: 26rpx;
+	color: #CCCCCF;
+}
+.btn-top{
+	width: 80%;
+	height: 100rpx;
+	margin-top: 400rpx;
+	line-height: 100rpx;
+	text-align: center;
+	font-size: 36rpx;
+	color: white;
+	border-radius: 50rpx;
+	background-color: #1ABC9C;
+}

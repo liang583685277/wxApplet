@@ -1,0 +1,18 @@
+<!--pages/jobplacement/jobplacement.wxml-->
+<view class='conbody'>
+	<view class='con-list' wx:for="{{jobdata}}" wx:key="item">
+		<view class='time-view'>
+			<text class='time'>{{item.createtime}}</text>
+		</view>
+		<view class='info-list'>
+			<view class='info-list-img'>
+				<image src='https://ylx.cqyycc.top/{{item.img}}' mode="aspectFill" bindtap='openpreviewimg' data-url='https://ylx.cqyycc.top/{{item.img}}'></image>
+			</view>
+			<view class='info-test'>
+				<text class='text-blod'>{{item.title}}</text>
+        		<text class='text-msg'>{{item.message}}</text>
+			</view>
+		</view>
+	</view>
+	<view hidden='{{previewimgstatus}}' class='previewimg' bindtap='closeimg'><image mode='widthFix' src="{{previewimgurl}}"></image></view>
+</view>

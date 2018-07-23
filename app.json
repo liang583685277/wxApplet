@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myworkorder/order",
+    "pages/set/set",
+    "pages/jobplacement/jobplacement",
+    "pages/saoyisao/saoyisao",
+    "pages/handadd/handadd",
+    "pages/sourcefor/sourcefor",
+    "pages/blrecord/blrecord",
+    "pages/myworkorder/lineitem/lineitem",
+    "pages/personaldata/personaldata",
+    "pages/vieworder/vieworder",
+    "pages/pushmoney/pushmoney"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "black"
+  }
+}

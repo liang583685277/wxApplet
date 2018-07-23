@@ -1,0 +1,42 @@
+/* pages/set/set.wxss */
+@import "../../css/base.wxss";
+.martop{
+	width: 100%;
+	padding: 150rpx 100rpx 0;
+	box-sizing: border-box;
+}
+.conlistbox{
+  position: relative;
+  width: 100%;
+  height: 128rpx;
+  line-height: 128rpx;
+  font-size: 35rpx;
+  color: #aaa;
+  border-bottom: solid #E4E4E4 1rpx; 
+}
+.conleft{
+  position: absolute;left: 30rpx;top: 0;
+  width: auto;
+  height: auto;
+}
+.left-icon{
+  height: 128rpx;
+  line-height: 128rpx;
+  font-size: 50rpx;
+}
+.nameinput{
+  height: 128rpx;
+  line-height: 128rpx;
+  padding-left: 120rpx;
+  box-sizing: border-box;
+}
+
+
+
+
+.btn-ok{
+	margin-top: 60rpx;
+	border-radius: 50rpx;
+	color: white;
+	background-color: #1ABC9C;
+}

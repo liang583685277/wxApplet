@@ -1,0 +1,86 @@
+/* pages/pushmoney/pushmoney.wxss */
+.body{
+  width: 100%;
+}
+.timeyer{
+  display: flex;
+  flex-direction:row;
+  /* justify-content:  */
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #989898;
+}
+.niandu{
+  margin-left: 40rpx;
+}
+.yerview{
+  width: 300rpx;
+  height: 60rpx;
+  margin-left: 60rpx;
+  text-indent: 20rpx;
+  border: solid 1px #E3E3E3;
+}
+.tichengdata{
+  margin:20px 10rpx 20rpx;
+  border: solid 1px #E3E3E3;
+  border-right: none;
+}
+.tichengdata>view{
+  display: flex;
+  flex-direction:row;
+}
+.tichengdata>view>view{
+  flex: 1;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  border-right: solid 1px #E3E3E3;
+}
+.headtcdata{
+  border-bottom: solid 1px #E3E3E3;
+  color: #989898;
+  background-color: #F1F1F1;
+}
+.contcdata{
+  color: #5B5B5B;
+}
+.wjsdata{
+  color: #17BB9C;
+}
+.datalist{
+  border-top: solid 1px #E3E3E3;
+}
+.data-list{
+  padding: 30rpx 40rpx;
+  border-bottom: solid 1px #E3E3E3;
+}
+.yertime{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.ckscdto{
+  text-align: right;
+  font-size: 28rpx;
+  color: #989898;
+  vertical-align: middle;
+}
+.tcinfo{
+  display: flex;
+  flex-direction:row;
+  font-size: 26rpx;
+  color: #989898;
+}
+.tcinfowjs{
+  color: #3AD184;
+}
+.tcinfo>text{
+  width: 160rpx;
+}
+.navimg{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}

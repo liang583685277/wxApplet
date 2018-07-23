@@ -1,0 +1,26 @@
+<!--pages/set/set.wxml-->
+<view class='container'>
+	<form class='martop' bindsubmit="formSubmit" bindreset="formReset">
+		<view class="conlistbox">
+			<view class="conleft"><span class="icon-password left-icon"></span></view>
+			<view class="conright">
+				<input class="nameinput" name="oldpwd" placeholder="原始密码" value='{{password}}'/>
+			</view>
+		</view>
+		<view class="conlistbox">
+			<view class="conleft"><span class="icon-password left-icon"></span></view>
+			<view class="conright">
+				<input class="nameinput" name="newpwd" placeholder="输入新的登录密码" value='{{password}}' password='{{isShowPassword}}'/>
+			</view>
+		</view>
+		<view class="conlistbox">
+			<view class="conleft"><span class="icon-password left-icon"></span></view>
+			<view class="conright">
+				<input class="nameinput" name="okpassword" placeholder="确认新的登录密码" value='{{password}}' password='{{isShowPassword}}'/>
+			</view>
+		</view>
+		<view class="btn-area">
+			<button class='btn-ok' formType="submit">确认</button>
+		</view>
+	</form>
+</view>

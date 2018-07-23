@@ -1,0 +1,65 @@
+<!--pages/personaldata/personaldata.wxml-->
+<view class='body'>
+  <view class='headicon'>
+    <view class='headimg'>
+      <image src="{{maindata.avatar?'https://ylx.cqyycc.top/'+maindata.avatar:avatar}}"></image>
+    </view>
+    <view class='alerthead' bindtap='upeditavatar'>修改头像<image src='../../img/right.png'></image></view>
+  </view>
+  <view class='personinfo'>
+    <form bindsubmit="formSubmit">
+      <view class='person-list'>
+        <view class='headtext'>名称</view>
+        <view class='rightin'>{{maindata.name}}
+		<!-- <input type='text' name="name" value='{{maindata.name}}' placeholder="输入名称"></input> -->
+		</view>
+      </view>
+      <view class='person-list'>
+        <view class='headtext'>登录账号</view>
+        <view class='rightin'>{{maindata.phone}}</view>
+      </view>
+       <view class='person-list'>
+        <view class='headtext'>关联工序</view>
+        <view class='rightin'>{{maindata.process}}</view>
+      </view> 
+      <view class='person-list'>
+        <view class='headtext'>银行账号</view>
+        <view class='rightin'>{{maindata.banknumber}}
+		<!-- <input type='number' name="banknumber" value='{{maindata.banknumber}}' placeholder="输入银行账号"></input> -->
+		</view>
+      </view>
+      <view class='person-list'>
+        <view class='headtext'>开户银行</view>
+        <view class='rightin'>{{bankstr[index]}}
+          <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankstr}}">
+            <view class="picker">
+              <text class='banktext'>{{banktext}}</text>{{bankstr[index]}}
+            </view>
+          </picker> -->
+        </view>
+      </view>
+      <view class='person-list'>
+        <view class='headtext'>身份证号</view>
+        <view class='rightin'>{{maindata.idcardno}}
+		<!-- <input type='idcard' maxlength='18' name="idcardno" value='{{maindata.idcardno}}' placeholder="输入身份证号"></input> -->
+		</view>
+      </view>
+      <!-- <view class='person-list'>
+        <view class='headtext'>出生日期</view>
+        <view class='rightin'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="{{ymd}}" bindchange="bindDateChange">
+            <view class="picker">
+              <text class='banktext'>{{timetext}}</text>{{date}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class='person-list'>
+        <view class='headtext'>性别</view>
+        <view class='rightin'><input type='idcard' placeholder=""></input></view>
+      </view>  -->
+      <!-- <button class='button' formType="submit">确认</button> -->
+    </form>
+    
+  </view>
+</view>
